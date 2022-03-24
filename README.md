@@ -98,7 +98,7 @@ software is installed on a Raspberry Pi, version 3, that is mounted in a case
 together with the Raspberry touchscreen. The case is fixed to the table by a
 custom, 3d-printed adapter pedestal.
 
-![Control electronics](images/setup_overview.jpg)
+![Control electronics](images/setup_raspberry_and_control_box.jpg)
 
 The necessary electronics is mostly within a secondary box just behind the
 Raspberry Pi. It contains the MAX31855 thermocouple readout boards, an
