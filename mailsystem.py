@@ -11,7 +11,7 @@ class MailSystem (object):
 
     SENDER = "oven@somedomain.jp"
 
-    def __init__ (self, recipients = [], smtp_server = "192.168.1.11"):
+    def __init__ (self, recipients = [], smtp_server = "192.168.1.2", from_addr = "oven@somedomain.jp"):
         """Create the object.
         
         :param recipients: list of mail addresses (default: empty list)
@@ -19,6 +19,7 @@ class MailSystem (object):
 
         self.sender = Mailer (smtp_server)
         self.recipients = recipients
+        self.from_addr = from_addr
 
     def sendMessage (self, subject, body):
         """Send a message.
@@ -31,7 +32,7 @@ class MailSystem (object):
         if (len (self.recipients) == 0):
             return
 
-        message = Message (From = MailSystem.SENDER, To = self.recipients, charset = "utf-8")
+        message = Message (From = self.from_addr, To = self.recipients, charset = "utf-8")
         message.Subject = subject
         message.Body = body
         self.sender.send (message)
@@ -39,4 +40,4 @@ class MailSystem (object):
 
 if __name__ == '__main__':
     ms = MailSystem (["test@testdomain.jp"])
-    ms.sendMessage ("Test", "Just a test message.\n\nFlorian")
+    ms.sendMessage ("Test", "Just a test message.\n\nCheers")

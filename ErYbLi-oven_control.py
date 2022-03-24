@@ -1130,7 +1130,8 @@ class MainWindow (ControlGUI):
             try:
                 server = config.getGeneral ('smtp_server')
                 if server:
-                    ms = mailsystem.MailSystem (recipients, server)
+                    from_addr = config.getGeneral ('from_addr')
+                    ms = mailsystem.MailSystem (recipients, server, from_addr)
                     ms.sendMessage (subject, body)
             except:
                 pass
