@@ -7,7 +7,8 @@ It is intended to run on a Raspberry Pi with the corresponding Raspberry Pi
 touchscreen installed. Additional technical details on the hardware
 implementation can be found in the `README.txt` file.
 
-ErYbLi-oven_control is built using Python and wxWidgets.
+ErYbLi-oven_control is built using Python (version 2.7) and wxWidgets (version
+3.0).
 
 ## Feature overview
 
