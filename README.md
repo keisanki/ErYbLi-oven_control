@@ -90,7 +90,7 @@ are talking of here in the first place.
 ![Setup overview](images/setup_overview.jpg)
 
 First, a general overview of the setup. On an optical table the three-species
-oven system is installed as part of the main vacuum system. It is is visible
+oven system is installed as part of the main vacuum system. It is visible
 as the shiny stainless-steel tube in the background. A supporting ion pump is
 visible on the right corner of the table. A flow sensor (central in the
 picture) monitors the flow rate in the water cooling system. The control
