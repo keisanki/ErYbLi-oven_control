@@ -80,6 +80,43 @@ mechanism. This allows, e.g. to start warming up the oven at a very early time
 in the morning and to have everything up and running by the time the crew
 arrives in the laboratory.
 
+## Application example
+
+As mentioned before, ErYbLi-oven_control has been developed for and is in use
+at the ErYbLi experiment of the Quantum Optics Group at Kyoto University.
+Below some pictures of the actual are show to give a better idea of what we
+are talking of here in the first place.
+
+![Setup overview](images/setup_overview.jpg)
+
+First, a general overview of the setup. On an optical table the three-species
+oven system is installed as part of the main vacuum system. It is is visible
+as the shiny stainless-steel tube in the background. A supporting ion pump is
+visible on the right corner of the table. A flow sensor (central in the
+picture) monitors the flow rate in the water cooling system. The control
+software is installed on a Raspberry Pi, version 3, that is mounted in a case
+together with the Raspberry touchscreen. The case is fixed to the table by a
+custom, 3d-printed adapter pedestal.
+
+![Control electronics](images/setup_overview.jpg)
+
+The necessary electronics is mostly within a secondary box just behind the
+Raspberry Pi. It contains the MAX31855 thermocouple readout boards, an
+isolated RS232 serial port for communication with the power supplies, the
+connection to the water flow sensor and a piezo buzzer. The electronics box
+connects to the Raspberry Pi GPIO connector via a flatband cable.
+
+![Power supplies](images/setup_power_supplies.jpg)
+
+Below the optical table is space to house the power supplies for the heating
+elements. They are manufactured by Takasago, the smaller ones are from the
+older KX series and provide between 100 and 210 W, the larger ones are more
+recent ZX series supplies and provide up to 400 W. (Note that ZX power
+supplies need to be put into EX compatibility mode. This is done by adjusting
+function setting 61 to 1.) The first power supply is connected to the RS232
+serial port of the electronics box and the other supplies are daisy-chained to
+form a data bus where each power supply has its individual address.
+
 ## Contact
 
 For any comments and/or bug reports please report to the author,
