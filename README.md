@@ -120,4 +120,4 @@ form a data bus where each power supply has its individual address.
 ## Contact
 
 For any comments and/or bug reports please report to the author,
-test@testdomain.jp.
+schaefer@scphys.kyoto-u.ac.jp.

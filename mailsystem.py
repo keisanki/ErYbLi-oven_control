@@ -9,8 +9,6 @@ class MailSystem (object):
     """MailSystem handles sending of normal status messages as well as warning 
     messages to a list of users"""
 
-    SENDER = "oven@somedomain.jp"
-
     def __init__ (self, recipients = [], smtp_server = "192.168.1.2", from_addr = "oven@somedomain.jp"):
         """Create the object.
         
